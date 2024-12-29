@@ -26,14 +26,15 @@ public class Calculator {
 	void reset() {
 		num1=0.0;
 		num2=0.0;
+		result=0.0;
 		System.out.println("Result:"+result);
 	}
 	public static void display() {
 		System.out.println("Result: "+result);
 	}
-	public static void exit() {
-		exit();
-	}
+//	public static void exit() {
+//		exit(0);
+//	}
 	public static void main(String args[]) {
 		double num1,num2;
 		int choice;
@@ -73,7 +74,9 @@ public class Calculator {
 				ob.reset();
 				break;
 			case 6:
-				exit();
+				System.out.println("Thank you!");
+				sc.close();
+				System.exit(0);
 			default:
 				System.out.println("Please check! the correct option");
 			}
